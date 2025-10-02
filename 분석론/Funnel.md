@@ -47,47 +47,44 @@ funnel_df.columns = ['stage', 'user_count']
 import plotly.graph_objects as go
 
 fig = go.Figure(go.Funnel(
-    # --- 데이터 설정 ---
-    
-    # (Y축): 퍼널의 각 단계.
-    y = funnel_df['stage'],
-    #(X축): 각 단계의 값
-    x = funnel_df['user_count'],
+    y = funnel_df['stage'],  # 각 단계 이름
+    x = funnel_df['user_count']  # 각 단계별 사용자 수
+))
+fig.show()
 
-)
 ```
 **추가작업**
 ```py
-    # --- 텍스트 정보 설정 ---
+fig = go.Figure(go.Funnel(
+    y = funnel_df['stage'],
+    x = funnel_df['user_count'],
     
-    # 텍스트 위치
-    textposition = "inside",  
-    #'inside'는 막대 안
-    #'outside'는 바깥쪽을 의미
+    # 텍스트 위치: 막대 안에 텍스트 표시
+    textposition = "inside",
+    
+    # 표시할 정보: 값, 초기 대비 %, 이전 단계 대비 %
+    textinfo = "value+percent initial+percent previous",
 
-    # 표시할 텍스트 정보
-    textinfo = "value+percent initial+percent previous", 
-    #'value'(실제 값), 'percent initial'(첫 단계 대비), 'percent previous'(이전 단계 대비)
-
-
-    # 각 막대(marker)의 스타일을 설정
+    # 막대 색상 및 테두리
     marker = {
-        "color": ["#4E79A7", "#F28E2B", "#E15759", "#76B7B2", "#59A14F"], # 각 막대의 색상을 리스트로 순서대로 지정
-        "line": { # 막대의 테두리 선 스타일을 설정
+        "color": ["#4E79A7", "#F28E2B", "#E15759", "#76B7B2", "#59A14F"],
+        "line": {
             "width": 1,
             "color": "#333333"
         }
     },
-    
-    # 각 단계를 연결하는 선(connector)의 스타일을 설정
+
+    # 단계 연결선 스타일
     connector = {
-        "line": { # 선의 색상, 종류('dot', 'solid' 등), 굵기를 지정
+        "line": {
             "color": "gray",
             "dash": "dot",
             "width": 2
         }
     }
 ))
+fig.show()
+
 ```
 
 
