@@ -35,6 +35,11 @@ LEFT JOIN B
 WHERE B.status = 'Y';
 ```
 
+
+**(3) ON절에 조건을 넣을 때는 기준 테이블이 전부 해당해야 한다**
+조건을 만족하지 않는 행은 JOIN이 NULL로 붙음
+
+
 ### COUNT(*) VS COUNT(컬럼)
 ```SQL
 COUNT(*)      -- NULL이어도 카운트
