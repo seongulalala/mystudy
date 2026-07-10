@@ -8,7 +8,7 @@ WITH RECURSIVE 이름 AS (
     -- 재귀: 이전 결과를 받아서 다음 값 만들기
     SELECT 다음값
     FROM 이름
-    WHERE 종료_조건
+    WHERE 종료_조건AS
 )
 SELECT * FROM 이름
 ```

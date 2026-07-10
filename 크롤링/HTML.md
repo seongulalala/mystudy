@@ -97,7 +97,7 @@ HTML은 **부모-자식(Parent-Child)** 관계로 이루어진 트리 구조다.
   4. 시작 태그와 종료 태그 사이에는 텍스트 또는 다른 요소(child)가 들어갈 수 있다
 
   5. 하나의 요소가 child이면서 동시에 다른 요소의 parent가 될 수 있다
-    → ex) <table>은 <body>의 child이면서 <tr>의 parent
+
 
 
 ## 6. 핵심 요약2
