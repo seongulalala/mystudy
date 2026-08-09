@@ -1,0 +1,15 @@
+bike-demand/data/raw/*
+bike-demand/data/processed/*
+
+!bike-demand/data/raw/.gitkeep
+!bike-demand/data/processed/.gitkeep
+
+*.csv
+
+.ipynb_checkpoints/
+__pycache__/
+.env
+*.csv
+.ipynb_checkpoints/
+__pycache__/
+.env
